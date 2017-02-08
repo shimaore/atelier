@@ -1,3 +1,5 @@
+require('babel-polyfill')
+
 var request = require('superagent')
 var co = require('co')
 var fun1G = function*(){
@@ -19,7 +21,3 @@ co(function*(){
   var data = yield co(fun1).catch(function(){return "perdu"})
   console.log("done "+data)
 })
-
-async function(){
-  var data = await co(fun1)
-}
