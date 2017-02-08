@@ -17,4 +17,4 @@ module.exports = {
     contentBase: './public'
   }
 }
-
+// https://github.com/shimaore/atelier
