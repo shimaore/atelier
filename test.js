@@ -7,7 +7,7 @@ var fun1G = function*(){
   res = yield request.get('https://google.com')
   p = res.text
   res = yield request
-    .get('https://facebook.com?'+p)
+    .get('https://facebook.com')
   // .catch(function(){ return null })
   // if(!res) return 67
   q = res.text
@@ -18,6 +18,6 @@ var fun1G = function*(){
 }
 
 co(function*(){
-  var data = yield co(fun1).catch(function(){return "perdu"})
+  var data = yield co(fun1G).catch(function(){return "perdu"})
   console.log("done "+data)
 })
